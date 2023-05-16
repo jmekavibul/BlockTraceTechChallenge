@@ -4,8 +4,8 @@ import TableComponent from "./TableComponent";
 const UserFormComponent = () => {
   const [cryptoTransaction, setCryptoTransaction] = useState({
     address: "",
-    apikey: "",
-    cryptoaddresstype: "",
+    apiKey: "",
+    addressType: "",
   });
 
   const [data, setData] = useState("");
@@ -53,9 +53,9 @@ const UserFormComponent = () => {
           <h5>API Key</h5>
           <input
             type="text"
-            name="apikey"
+            name="apiKey"
             placeholder="API Key"
-            value={cryptoTransaction.apikey}
+            value={cryptoTransaction.apiKey}
             onChange={handleChange}
             
             />
@@ -64,9 +64,9 @@ const UserFormComponent = () => {
           <h5>Crypto Address Type</h5>
           <input
             type="text"
-            name="cryptoaddresstype"
+            name="addressType"
             placeholder="Crypto Address Type"
-            value={cryptoTransaction.cryptoaddresstype}
+            value={cryptoTransaction.addressType}
             onChange={handleChange}
 
           />
