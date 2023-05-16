@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import TableComponent from "./TableComponent";
-const UserForm = () => {
+const UserFormComponent = () => {
   const [cryptoTransaction, setCryptoTransaction] = useState({
     address: "",
     apikey: "",
@@ -81,4 +81,4 @@ const UserForm = () => {
   );
 }
 
-export default UserForm;
+export default UserFormComponent;

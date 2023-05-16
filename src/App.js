@@ -1,9 +1,9 @@
 import './App.css';
-import Form from "./components/Form.jsx"
+import UserFormComponent from "./components/UserFormComponent.jsx"
 
 function App() {
   return (
-    <Form/>
+    <UserFormComponent/>
   );
 }
 
