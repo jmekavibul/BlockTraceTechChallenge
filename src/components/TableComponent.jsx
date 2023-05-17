@@ -29,9 +29,8 @@ const TableComponent = ({ data }) => {
         </thead>
         <tbody>
             {sortedData.map((item, index) => (
-            <tr key={item.address}>
+            <tr key={index}>
                 <td>{item.address}</td>
-                {/* You may need to adjust these to match the actual data structure */}
                 <td>{item.summary.source}</td>
                 <td>{item.asset}</td>
                 <td>{item.summary.balance}</td>
