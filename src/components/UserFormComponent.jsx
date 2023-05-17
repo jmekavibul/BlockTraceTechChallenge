@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 import TableComponent from "./TableComponent";
@@ -19,6 +19,7 @@ const UserFormComponent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setResponseMessage(null);
 
     axios
       .post("https://blocktrace-express-backend.herokuapp.com/submit", cryptoTransaction, {
@@ -30,7 +31,7 @@ const UserFormComponent = () => {
         setData(response.data);
       })
       .catch((error) => {
-        setResponseMessage("Error occurred.", error);
+        setResponseMessage(`Error Code: ${error.response.status} Error Message: ${error.response.data}`);
       });
   };
 
@@ -85,9 +86,9 @@ const UserFormComponent = () => {
             Submit Contact
           </button>
         </div>
+        {responseMessage && <div className="text-red-600">{responseMessage}</div>}
       </form>
       {data && <TableComponent data={data} />}
-      {responseMessage && <div>{responseMessage}</div>}
     </div>
   );
 };
