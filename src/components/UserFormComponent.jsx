@@ -18,7 +18,7 @@ const UserFormComponent = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch("http://localhost:9000/submit", {
+    fetch("https://blocktrace-express-backend.herokuapp.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
