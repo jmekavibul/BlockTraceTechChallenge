@@ -19,6 +19,7 @@ const UserFormComponent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setData(null);
     setResponseMessage(null);
 
     axios
