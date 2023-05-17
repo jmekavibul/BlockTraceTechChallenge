@@ -88,7 +88,10 @@ const UserFormComponent = () => {
         </div>
         {responseMessage && <div className="text-red-600">{responseMessage}</div>}
       </form>
-      {data && <TableComponent data={data} />}
+      <div className="p-16 space-y-8">
+
+        {data && <TableComponent data={data} />}
+      </div>
     </div>
   );
 };

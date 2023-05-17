@@ -26,7 +26,7 @@ const GraphComponent = ({ top5TotalSent }) => {
             options={options}
             series={series}
             type="bar"
-            width="50%"
+            width="75%"
           />
         </div>
       </div>
